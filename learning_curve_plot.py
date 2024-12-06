@@ -2,7 +2,7 @@
 
 xgb_model.fit(X_train, y_train, eval_set=[(X_train, y_train), (X_test, y_test)])
 
-results = xgb_eval.evals_result()
+results = xgb_model.evals_result()
 
 plt.figure(figsize=(8, 6))
 sns.lineplot(data=results['validation_0']['rmse'], label='train')
